@@ -1,0 +1,3 @@
+[submodule "dep/.vim_runtime"]
+	path = dep/.vim_runtime
+	url = https://github.com/amix/vimrc.git
