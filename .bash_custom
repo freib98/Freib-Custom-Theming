@@ -1,5 +1,19 @@
 # Custom Prompt
-PS1='${debian_chroot:+($debian_chroot)}\[\e[32;1m\]→ \[\e[0;36m\]\u@\h\[\e[0m\] \w » '
+
+__prompt_command() {
+    local exitcode="$?"
+    arrowColor="\e[32;1m\]"             # Default is green
+
+    if [ $exitcode -eq 0 ]; then
+        arrowColor="\e[32;1m\]"         # Green
+    else
+        arrowColor="\e[31;1m\]"         # Red
+    fi
+
+    PS1="${debian_chroot:+($debian_chroot)}\[${arrowColor}→ \[\e[0;36m\]\u@\h\[\e[0m\] \w » "
+}
+
+PROMPT_COMMAND=__prompt_command
 
 # Aliases
 
