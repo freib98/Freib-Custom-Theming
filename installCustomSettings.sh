@@ -1,12 +1,20 @@
 #!/bin/bash
 
-# Custom PS1
 bashrc=$(<.bashrc)
-echo -e "\n\n" >> ~/.bashrc
-echo "$bashrc" >> ~/.bashrc
 
-# Custom vim
-cp -r ./dep/.vim_runtime ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
+function installCustomBash {
+    echo -e "\n" >> ~/.bashrc && echo "$bashrc" >> ~/.bashrc
+
+    cp ./.bash_custom ~/.bash_custom
+}
+
+function installCustomVim {
+    cp -r ./dep/.vim_runtime ~/.vim_runtime
+    sh ~/.vim_runtime/install_awesome_vimrc.sh
+}
+
+installCustomBash
+
+installCustomVim
 
 echo 'Done!'
