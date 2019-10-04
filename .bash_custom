@@ -1,4 +1,6 @@
-# Custom Prompt
+# ----------------------------
+#  Custom Prompt
+# ----------------------------
 
 __prompt_command() {
     local exitcode="$?"
@@ -15,7 +17,9 @@ __prompt_command() {
 
 PROMPT_COMMAND=__prompt_command
 
-# Aliases
+# ----------------------------
+#  Aliases
+# ----------------------------
 
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -26,6 +30,8 @@ alias l='ls -CF'
 alias less='less -FSRXc'
 
 alias cls='clear'
+
+alias err='echo $?'
 
 alias ..="cd .."
 alias ...="cd ../.."
