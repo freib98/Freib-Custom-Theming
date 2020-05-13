@@ -1,11 +1,11 @@
 #!/bin/bash
 
-bashrc=$(<bash/.bashrc)
+bashrc=$(<.bashrc)
 
 function installCustomBash {
     echo -e "\n" >> ~/.bashrc && echo "$bashrc" >> ~/.bashrc
 
-    cp ./bash/.bash_custom ~/.bash_custom
+    cp ./.bash_custom ~/.bash_custom
 }
 
 function installTheFuck {
