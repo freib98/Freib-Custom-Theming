@@ -27,3 +27,5 @@ function Prompt {
 
     "$($returnArrow) $($userWithDomain) $path » "
 }
+
+Set-PSReadlineKeyHandler -Key Tab -Function Complete
