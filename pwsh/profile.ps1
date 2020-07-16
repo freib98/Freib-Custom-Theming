@@ -29,3 +29,16 @@ function Prompt {
 }
 
 Set-PSReadlineKeyHandler -Key Tab -Function Complete
+
+function .. { cd .. }
+function ... { cd ..\.. }
+function .... { cd ..\..\.. }
+function ..... { cd ..\..\..\.. }
+function ...... { cd ..\..\..\..\.. }
+function ....... { cd ..\..\..\..\..\.. }
+function ........ { cd ..\..\..\..\..\..\.. }
+function ......... { cd ..\..\..\..\..\..\..\.. }
+function .......... { cd ..\..\..\..\..\..\..\..\.. }
+function ........... { cd ..\..\..\..\..\..\..\..\..\.. }
+function ............ { cd ..\..\..\..\..\..\..\..\..\..\.. }
+function ............. { cd ..\..\..\..\..\..\..\..\..\..\..\.. }
